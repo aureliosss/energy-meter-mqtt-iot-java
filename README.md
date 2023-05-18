@@ -1,6 +1,7 @@
 # Energy meter MQTT IoT JAVA
 
-This project utilizes the Hiking DDS238-2 energy meter device, configured with Tasmota firmware. The firmware flashing procedure can be found in detail on the following GitHub repository: Hiking DDS238-2 WIFI Din Rail Energy Meter flashing Tasmota.
+This project utilizes the Hiking DDS238-2 energy meter device, configured with Tasmota firmware. The firmware flashing procedure can be found in detail on the following GitHub repository: . [Hiking DDS238-2 WIFI Din Rail Energy Meter flashing Tasmota](https://github.com/krikk/Hiking-DDS238-2-WIFI-Din-Rail-Energy-Meter-flashing-Tasmota)
+.
 
 The energy meter device is connected to a MQTT MOSQUITTO broker, running on Home Assistant. The Java implementation, built with the Spring Boot framework and Thymeleaf templating engine, captures and displays the messages transmitted by the energy meter sensor in a web browser.
 
