@@ -1,0 +1,9 @@
+mqtt:
+  broker: tcp://your_address_mosquitto_broker
+  topic: tele/%your_topic%/SENSOR
+  username: your_user
+  password: your_pass
+  client-id: your_client_id
+  qos: 0
+
+

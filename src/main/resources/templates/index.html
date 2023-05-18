@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+    <script src="/webjars/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+    <meta http-equiv="refresh" content="5">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+            <img src="/image/model_energy_meter.png" alt="Model of an energy meter" style="width: 100%; max-width: 800px; display: block; margin: 0 auto; margin-bottom: 10px;">
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <h1 class="text-center">Energy Meter Data</h1>
+</header>
+<section class="container text-light mt-0 mb-3">
+    <h1>Energy Meter Data</h1>
+    <hr>
+    <table class="table table-hover table-striped table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th>id</th>
+            <th>Total</th>
+            <th>Voltage</th>
+            <th>Yesterday</th>
+            <th>Today</th>
+            <th>PowerNow</th>
+            <th>Time</th>
+        </tr>
+        </thead>
+        <tbody class="table-primary shadow-lg p-3 mb-5">
+        <tr th:each="entry, entryStat : ${data}">
+            <td th:text="${entryStat.count}"></td>
+            <td th:text="${entry.total}"></td>
+            <td th:text="${entry.voltage}"></td>
+            <td th:text="${entry.yesterday}"></td>
+            <td th:text="${entry.today}"></td>
+            <td th:text="${entry.powerNow}"></td>
+            <td th:text="${#temporals.format(entry.timestamp, 'dd-MM-yyyy | HH:mm:ss')}"></td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+</body>
+</html>
